@@ -4,7 +4,7 @@ curl -sl https://raw.githubusercontent.com/DavidMolitt/PRAX/main/install_arch_di
 
 instalacaia na debian based distribuciach
 
-curl -sl https://github.com/DavidMolitt/PRAX/blob/main/install_deb_distors.sh | sh
+curl -sl https://raw.githubusercontent.com/DavidMolitt/PRAX/main/install_deb_distors.sh | sh
 
 na windowse 
 
