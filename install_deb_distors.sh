@@ -20,7 +20,7 @@ if ! systemctl is-active --quiet docker; then
 fi
 
 cd
-git clone https://github.com/Gabko890/appPY
+git clone https://github.com/DavidMolitt/PRAX
 
 cd ~/appPY
 
