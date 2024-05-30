@@ -1,6 +1,6 @@
 instalacia na Arch based distribuciach
 
-curl -sl https://github.com/DavidMolitt/PRAX/blob/main/install_arch_distros.sh | sh
+curl -sl https://raw.githubusercontent.com/DavidMolitt/PRAX/main/install_arch_distros.sh | sh
 
 instalacaia na debian based distribuciach
 
