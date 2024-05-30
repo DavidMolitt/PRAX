@@ -3,18 +3,14 @@ import requests
 
 app = Flask(__name__)
 
-# External API
 BASE_URL = "https://jsonplaceholder.typicode.com"
 
-# Data pre demonstraciu, mozno pouzit ORM
 posts = []
 
-# ID validacia
 def validate_user_id(user_id):
     response = requests.get(f"{BASE_URL}/users/{user_id}")
     return response.status_code == 200
 
-# Pridanie postu
 @app.route('/posts', methods=['POST'])
 def add_post():
     data = request.get_json()
@@ -23,7 +19,6 @@ def add_post():
         return jsonify({'message': 'Post uspesne pridany'}), 201
     return jsonify({'error': 'Nespravne User ID'}), 400
 
-# Vyhladanie IDeckom
 @app.route('/posts/<int:id>', methods=['GET'])
 def get_post(id):
     for post in posts:
@@ -36,7 +31,6 @@ def get_post(id):
         return jsonify(new_post)
     return jsonify({'error': 'Post nenajdeny'}), 404
 
-# Deletnutie postu
 @app.route('/posts/<int:id>', methods=['DELETE'])
 def delete_post(id):
     for i, post in enumerate(posts):
@@ -45,7 +39,6 @@ def delete_post(id):
             return jsonify({'message': 'Post odstraneny'})
     return jsonify({'error': 'Post nenajdeny'}), 404
 
-# Update postu
 @app.route('/posts/<int:id>', methods=['PUT'])
 def update_post(id):
     data = request.get_json()
